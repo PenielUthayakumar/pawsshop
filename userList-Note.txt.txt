@@ -1,0 +1,6 @@
+Managers:
+peniel@peniel
+
+Cashiers:
+arun@arun
+test@test

@@ -1,0 +1,6 @@
+Squeaky Paw Plush,1200,Soft squeaky plush toy,001,Pet Toys
+Adventure Fit Harness,3500,Adjustable padded harness,002,Harnesses
+Cozy Habitat Cage,7800,Spacious metal cage,003,Cages
+FreshPaws Shampoo,2100,Gentle hypoallergenic shampoo,004,Grooming Products
+Pet Neckband,1800,Durable nylon collar,005,Collars
+ComfyPet Collar,1500,Soft adjustable collar,006,Collars
