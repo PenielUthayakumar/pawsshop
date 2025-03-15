@@ -103,27 +103,28 @@ public class LoginForm extends javax.swing.JFrame {
         String username = usernameField.getText();
         String password = passwordField.getText();
         
-/**     Creating some users (Cashier & Manager) and adding to the list.
- *      
- *      The following Users have been added and saved to userList.dat file the fist time the code was run.
- *      Therefore commenting this section to avoid duplication and for visibility.
- * 
-        userList.add(new Cashier("Arun", "5555", "arun", "arun" , "001"));
-        userList.add(new Manager("Peniel", "7777", "peniel", "peniel" ,"001"));   
-         
-        saveUserList();
-**/        
+//       Creating some users (Cashier & Manager) and adding to the list.
+//       
+//       The following Users have been added and saved to userList.dat file the fist time the code was run.
+//       Therefore commenting this section to avoid duplication and for visibility.
+//  
+//        userList.add(new Cashier("Arun", "5555", "arun", "arun" , "001"));
+//        userList.add(new Manager("Peniel", "7777", "peniel", "peniel" ,"001"));   
+//         
+//        saveUserList();
+        
+ boolean found = false;
+        
         // Loops through the list and validate login credentials
         for(User user : userList){
             if(username.equals(user.getUsername()) && password.equals(user.getPassword())){
+                found = true;
                
                  // If the user is a Manager
                 if (user instanceof Manager) {
                     // Open the Manager interface
                     ManagerFrame managerFrame = new ManagerFrame(this);
                     managerFrame.setVisible(true);
-//                    CashierFrame cashierFrame = new CashierFrame(this);
-//                    cashierFrame.setVisible(true);
                     this.dispose();  // Close the login screen
                     userType = "Manager";
                 }
@@ -136,14 +137,14 @@ public class LoginForm extends javax.swing.JFrame {
                     this.dispose();  // Close the login screen
                     userType = "Cashier";
                 }
-                
-                
+                                
                 break; // To exit loop when login is successful
-            }
-//              else {
-//                JOptionPane.showMessageDialog(null, "Invalid Credentials! \n Please try again.");
-//                break;
-//            }
+                
+            }      
+        }     
+        
+        if (!found){
+                JOptionPane.showMessageDialog(null, "Invalid Credentials! \n Please try again.");
         }
         
         
